@@ -1,10 +1,10 @@
 //added a new date object and stored in a var "today"
 let today = new Date();
-//const myName = Ljiljana;
-//console.log(thisYear);
+
+
 //Got the current year from new Date object and stored into thisYear
 let thisYear = today.getFullYear();
-//should I define const body = document.body for following
+
 //Selected <footer> element and stored into var "footer"
 const footer = document.querySelector("footer");
 //create a new <p> and store it into "copyright"
@@ -22,3 +22,13 @@ for (let i = 0; i < skills.length; i++) {
      skill.innerHTML = skills[i]
      skillsList.appendChild(skill)
 }
+
+//Handling Message Form Submit
+
+const messageForm=document.forms.leave_message;
+messageForm.addEventListener ('submit', (event) => {
+    const user=event.target.usersName.value;
+    const mail=event.target.usersEmail.value;
+    const mssg= event.target.usersMessage.value;
+console.log(user, mail, mssg);
+});
