@@ -14,7 +14,7 @@ copyright.innerHTML = `Ljiljana Janjić &copy ${thisYear}`;
 //copyright.apprendChild(footer);
 footer.appendChild(copyright);
 //List of Skills section
-let skills = ["Communication", "Front-end Coding", "Git", "Problem Solving", "Attention to Detail"];
+let skills = ["* Communication", "* Front-end Coding", "* Git", "* Problem Solving", "* Attention to Detail"];
 let skillsSection = document.getElementById("skills");
 let skillsList = skillsSection.querySelector("ul");
 for (let i = 0; i < skills.length; i++) {
@@ -24,7 +24,6 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 //Handling Message Form Submit
-
 const messageForm = document.forms.leave_message;
 messageForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -35,8 +34,9 @@ console.log(user, mail, mssg);
 let messageSection = document.getElementById("messages");
 let messageList = messageSection.querySelector("ul");
 let newMessage = document.createElement("li");
-newMessage.innerHTML = `<a href=mailto:${mail}>${user}</a> <span>${mssg}</span>`; 
+newMessage.innerHTML = `<a href=mailto:${mail}>${user}'s message:</a> <span>"${mssg}"</span>`; 
 let removeButton = document.createElement("button");
+removeButton.className = "button_class";
 removeButton.innerText = "remove";
 removeButton.type = "button";
 removeButton.addEventListener('click', (event) => {
