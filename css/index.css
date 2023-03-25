@@ -1,0 +1,116 @@
+body {
+    background-color:rgb(172, 196, 214);  
+    color: rgb(56, 18, 131);
+    font-family: Monaco, monospace;
+    padding:0%
+    border: 2px solid rgb(151, 106, 241);
+    margin: 10px;
+    font-weight: 900;
+    font-size-adjust: 30px;
+    box-sizing: border-box;
+}
+img {
+    clip-path:circle(); 
+}
+.photo {
+    display: flex;
+    justify-content: center;
+}
+.intro {
+    text-align: center;
+    color:rgb(151, 106, 241);
+}
+ .about-me {
+    text-align: center;
+    display: inline;   
+}
+section {
+    margin-bottom: 50px;
+}
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color:rgb(56, 18, 131);
+    text-align: center;
+}
+.title-education {
+    background-color: rgb(80, 80, 170);
+}
+.education {
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color:rgb(56, 18, 131);
+}
+.title-experience {
+    background-color: rgb(80, 80, 170);
+}
+.experience {
+    display: block;
+    color:rgb(56, 18, 131);
+    font-weight: 600;
+}
+.title-skills {
+    background-color: rgb(80, 80, 170);
+    text-align: center;
+}
+.skills-list {
+    font-family: Monaco, monospace ;
+    font-style: oblique;
+    font-size: 30px;
+    color: rgb(149, 105, 238);
+    text-align: center;
+    list-style-type: none;
+    justify-content: center;
+}
+.social-media {
+    background-color: rgb(80, 80, 170);
+    text-align: left;
+}
+.feedback {
+    display:flex;
+    justify-content: center;
+    font-size: medium;
+    text-align: center;
+    background-color: rgb(80, 80, 190);
+    width: 700px;
+    margin: 0 auto;
+}
+.btm {
+    background-color: rgb(36, 160, 237);
+    font-family:'Times New Roman';
+    font-weight: 500;
+    font-size: 15px;
+    padding:8px;
+    border: 2px;
+    margin: 10px;
+    width: 100px;
+}
+.title-messages {
+    border: 3px solid darkblue;
+    padding: 3px;
+    width: 180px;
+}
+#messages {
+    font-size: 20px;
+    padding: 5px;
+    border: 5px;
+    margin: 10px;
+}
+.footer {
+    background-color:rgb(138, 165, 219);
+    text-align: center;
+    word-spacing: 5px;
+    padding: 2px;
+    width: 600px;
+    height: 50px;
+}
+.button_class {
+    font-size: 10px;;
+    background-color: rgb(167, 167, 202);
+
+}
