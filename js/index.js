@@ -48,3 +48,4 @@ newMessage.appendChild(removeButton)
     messageList.append(newMessage)
 
 });
+
