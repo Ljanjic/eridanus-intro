@@ -1,13 +1,30 @@
+header {
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.container > div {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 1rem;
+   
+}
 body {
-    background-color:rgb(172, 196, 214);  
-    color: rgb(56, 18, 131);
+    background-color: whitesmoke;
+    color: black
     font-family: Monaco, monospace;
-    padding:0%
-    border: 2px solid rgb(151, 106, 241);
-    margin: 10px;
     font-weight: 900;
-    font-size-adjust: 30px;
+    font-size: 30px;
     box-sizing: border-box;
+    width: 100%;
+}
+.body-wrapper {
+    width: 100%;
+    
 }
 img {
     clip-path:circle(); 
@@ -20,7 +37,7 @@ img {
     text-align: center;
     color:rgb(151, 106, 241);
 }
- .about-me {
+.about-me {
     text-align: center;
     display: inline;   
 }
@@ -37,7 +54,7 @@ h1 {
     background-color: rgb(80, 80, 170);
 }
 .education {
-    font-size: 20px;
+    font-size: 30px;
     text-align: left;
     font-weight: bold;
 }
@@ -53,64 +70,95 @@ h2 {
     display: block;
     color:rgb(56, 18, 131);
     font-weight: 600;
+    justify-content: center;
+    align-items: center;
 }
 .title-skills {
     background-color: rgb(80, 80, 170);
     text-align: center;
 }
 .skills-list {
+    display: grid;
+    grid-auto-flow: row;
     font-family: Monaco, monospace ;
     font-style: oblique;
     font-size: 30px;
-    color: rgb(149, 105, 238);
-    text-align: center;
+    color: rgb(58, 15, 137);
+    background-color:white;
+    align-items: left;
     list-style-type: none;
-    justify-content: center;
+    width: 100%;
+    justify-content: left;
 }
 .social-media {
-    background-color: rgb(80, 80, 170);
+    background-color: rgb(105, 105, 193);
     text-align: left;
 }
+.title-feedback {
+    background-color: rgb(36, 160, 237);
+    height: 40px;
+    text-align: center;
+    width: 100%;
+}
 .feedback {
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    font-size: medium;
+    font-size: 20px;
     text-align: center;
     background-color: rgb(80, 80, 190);
-    width: 700px;
-    margin: 0 auto;
+}  
+#leave_message{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+   
 }
 .btm {
     background-color: rgb(36, 160, 237);
     font-family:'Times New Roman';
     font-weight: 500;
     font-size: 15px;
-    padding:8px;
-    border: 2px;
-    margin: 10px;
     width: 100px;
 }
+
 .title-messages {
-    border: 3px solid darkblue;
-    padding: 3px;
-    width: 180px;
+    width: 100%;
 }
 #messages {
-    font-size: 20px;
-    padding: 5px;
-    border: 5px;
-    margin: 10px;
+    display: block;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    width: 100%;
+    font-size: 20px; 
 }
 .footer {
+    display: block;
     background-color:rgb(138, 165, 219);
-    text-align: center;
-    word-spacing: 5px;
-    padding: 2px;
-    width: 600px;
-    height: 50px;
+    text-align: left;
+    word-spacing: 2px;
 }
 .button_class {
-    font-size: 10px;;
+    font-size: 10px;
     background-color: rgb(167, 167, 202);
-
+}
+@media (max-width: 600px) { 
+    .body-wrapper {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .container {
+        display:block;
+        width: 100%;
+}
+@media (min-width:1200px) {
+    .body-wrapper {
+        width: 1000px;
+    }   
 }
