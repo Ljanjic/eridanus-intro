@@ -2,17 +2,28 @@
 <html lang="en">
     <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>www.ljiljanajanjic.com</title>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     </head>
   <body>
-<section>
+    <div class="body-wrapper">
+    <header>
+      <nav class = "container">
+        <div><a href="#about-section">About</a></div>
+        <div><a href="#education-section">Education</a></div>
+        <div><a href="#experience-section">Experience</a></div>
+        <div><a href="#skills">Skills</a></div>
+        <div><a href="#contact-section">Contact</a></div>
+      </nav>
+    </header>
+<section id="about-section">
 <div class="photo">
     <img src="images/ljiljana-janjic-photo.jpg" width = '300'> </div>
     <h1 class="intro"><strong><em>Hello!<br> I'm Ljiljana!<br> Welcome to my Web-page!</em></strong></h1>
     <p class="about-me"><center>I am a student of <a href="https://codethedream.org/"><strong>Code the Dream</strong></a>, currently enrolled in <strong>“Intro to programming”</strong> course.</center><center>Based in <em>Boston, MA (US)</em>, but originally from <a href="https://www.visitsarajevo.ba/"><em>Sarajevo, Bosnia and Herzegovina</em></a>.</center></p>
 </section>
-<section>
+<section id="education-section">
 <h1 class="title-education"><strong>Prior Education</strong></h1>
 <ul class="education">
     <li><em>Master in Business Communication</em></li>
@@ -20,7 +31,7 @@
     <li><em>High-school degree in Computer science</em></li>
 </ul>
 </section>
-<section>
+<section id="experience-section">
     <h1 class="title-experience"><strong>Experience</strong></h1>
     <p class="experience"> Through High-school education I learned basics of Programming by exploring <em>C++</em> language. 
         Although I do not have prior (professional) experience I can describe myself as highly motivated and interested to: learn, develop new skills and knowledge, 
@@ -29,6 +40,7 @@
 <section id = "skills">
     <h2 class="title-skills">Skills</h2>
       <ul class="skills-list">
+         <!-- HTML will be inserted here via JS -->
       </ul>
 </section>
 <section>
@@ -39,8 +51,8 @@
        <h3><li><a href="mailto:ljiljajanjic@gmail.com"><strong>Email me!</strong></a></li></h3>
     </ul>
 </section>
-<section>
-    <h2 class="title-feedback"><center>Leave a Message</center></h2>
+<section id="contact-section">
+    <h2 class="title-feedback">Leave a Message</h2>
     <div class="feedback">
       <form id="leave_message">
         <label for="name">Your Name</label><br>
@@ -53,11 +65,12 @@
       </form>
 </div>
 </section>
-<section id="messages">
+<section id="messages" style="display:none">
     <h2 class="title-messages">Messages:</h2>
     <ul></ul>
 </section>
 <footer class="footer"></footer>
 <script src="js/index.js"></script>
+ </div>
 </body>
 </html>

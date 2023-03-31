@@ -39,12 +39,15 @@ let removeButton = document.createElement("button");
 removeButton.className = "button_class";
 removeButton.innerText = "remove";
 removeButton.type = "button";
-removeButton.addEventListener('click', (event) => {
-    entry = event.target.parentNode;
+ removeButton.addEventListener('click', (event) => {
+   const entry = event.target.parentNode;
     entry.remove()  
-    document.getElementById("leave_message").reset();
-}) 
-newMessage.appendChild(removeButton)
-    messageList.append(newMessage)
-
+    if (messageList.childElementCount === 0) {
+        messageSection.style.display = "none";
+    }  
+ }) 
+ messageSection.style.display = "block";
+ newMessage.appendChild(removeButton);
+     messageList.append(newMessage);
 });
+
