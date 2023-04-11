@@ -50,4 +50,24 @@ removeButton.type = "button";
  newMessage.appendChild(removeButton);
      messageList.append(newMessage);
 });
-
+//Fetch GitHub Repositories
+    let gitHubRequest = new XMLHttpRequest();
+    gitHubRequest.open("GET", "https://api.github.com/users/Ljanjic/repos");
+    gitHubRequest.send();
+    gitHubRequest.addEventListener('load', function(event) {
+    let repositories = JSON.parse(this.response);
+    console.log(repositories); 
+//Display Repositories in List
+let projectSection = document.getElementById("projects");
+let projectList = projectSection.querySelector("ul");
+for (let i = 0; i < repositories.length; i++) {
+  let project = document.createElement("li");
+    if (repositories[i].name === 'eridanus-intro') {
+    project.innerHTML = `<a href = "${repositories[i].html_url}">${repositories[i].name}</a>`   
+    }
+  else {
+   project.innerText = repositories[i].name;
+}
+  projectList.appendChild(project);
+}
+})
