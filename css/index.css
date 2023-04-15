@@ -2,9 +2,6 @@
     margin: 0;
     padding: 0;
 }
-section {
-    
-}
 h3 {
     padding-top: 30px;
     padding-bottom: 10px;
@@ -61,7 +58,6 @@ h1 {
     list-style-type: none;
     font-weight: bold;
     padding: 15px;
-
 }
 h2 {
     text-align: center;
@@ -185,7 +181,6 @@ h2 {
     padding: 2px;
     font-size: 25px;
     font-weight: 900;
-
 }
 header {
     display: flex;
