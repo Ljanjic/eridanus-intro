@@ -12,12 +12,12 @@ copyright.innerHTML = `Ljiljana Janjić &copy ${thisYear}`;
 //copyright.apprendChild(footer);
 footer.appendChild(copyright);
 //List of Skills section
-let skills = ["* Communication", "* Front-end Coding", "* Git", "* Problem Solving", "* Attention to Detail"];
+const skills = ["* Communication", "* Front-end Coding", "* Git", "* Problem Solving", "* Attention to Detail"];
 let skillsSection = document.getElementById("skills");
 let skillsList = skillsSection.querySelector("ul");
 for (let i = 0; i < skills.length; i++) {
-	let skill = document.createElement("li")
-	skill.innerHTML = skills[i]
+	let skill = document.createElement("li");
+	skill.innerText = skills[i]
 	skillsList.appendChild(skill)
 }
 
@@ -28,25 +28,27 @@ messageForm.addEventListener('submit', (event) => {
 	const user = event.target.usersName.value;
 	const mail = event.target.usersEmail.value;
 	const mssg = event.target.usersMessage.value;
-	console.log(user, mail, mssg);
+	
 	let messageSection = document.getElementById("messages");
 	let messageList = messageSection.querySelector("ul");
 	let newMessage = document.createElement("li");
-	newMessage.innerHTML = `<a href=mailto:${mail}>${user}'s message:</a> <span>"${mssg}"</span>`;
+	newMessage.innerHTML = `<a href="mailto:${mail}">${user}'s message:</a> <span>${mssg}</span>`;
 	let removeButton = document.createElement("button");
 	removeButton.className = "button_class";
-	removeButton.innerText = "remove";
+	removeButton.innerText = "Remove";
 	removeButton.type = "button";
+	removeButton.style.color = "black";
 	removeButton.addEventListener('click', (event) => {
 		const entry = event.target.parentNode;
-		entry.remove()
+		entry.remove();
 		if (messageList.childElementCount === 0) {
 			messageSection.style.display = "none";
 		}
-	})
+	});
 	messageSection.style.display = "block";
 	newMessage.appendChild(removeButton);
-	messageList.append(newMessage);
+	messageList.appendChild(newMessage);
+	messageForm.reset();
 });
 /*Fetch GitHub Repositories
     let gitHubRequest = new XMLHttpRequest();
@@ -90,7 +92,6 @@ fetch('https://api.github.com/users/Ljanjic/repos')
 			projectList.appendChild(project);
 		}
 	})
-	.catch(error => {
-		console.log('You made some error!');
-		console.error(error);
+	.catch((error) => {
+		console.error('You made some error!', error)
 	});
