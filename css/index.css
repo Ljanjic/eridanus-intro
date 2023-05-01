@@ -1,83 +1,69 @@
 * {
     margin: 0;
     padding: 0;
-}
-section {
-    
+    color: white;
 }
 h3 {
     padding-top: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     text-align: center;
 }
 body {
     display: flex;
-    background-color: rgb(183, 165, 241);
+    background-color: rgb(119, 23, 63);
     font-family: Monaco, monospace;
     font-weight: 900;
-    font-size: 25px;
     width: 100%;
-}
-nav {
-    display: flex;
-    flex-direction: row; 
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center; 
 }
 img {
     clip-path:circle(); 
+    justify-content: center;
 }
 .photo {
     display: flex;
     justify-content: center;
     padding-top: 20px;
 }
+
 .intro {
     text-align: center;
-    color:black;
     font-size: 30px;
     font-weight: 900;
+    padding-top: 35px;
+    padding-bottom: 20px;
 }
-h1 {
-    color:rgb(223, 219, 230);
+h2 {
+    font-size: 35px;
     text-align: center;
+    font-weight: bolder;
+    padding-top: 35px;
+    padding-bottom: 10px;
 }
 .about-me {
     text-align: center;
-    font-size: 35px;
     font-weight: 700;
-    color:azure;
-    padding: 30px;  
+    padding: 20px;
+    background-color: rgb(196, 65, 116);  
+    padding-top: 35px;
+    padding-bottom: 20px;
 }
 .title-education {
-    color: white;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 10px;
+    padding-top: 80px;
+    padding-bottom: 30px;
 }
 .education {
     text-align: center;
     list-style-type: none;
     font-weight: bold;
     padding: 15px;
-
-}
-h2 {
-    text-align: center;
-    font-weight: 800;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    color:white;
 }
 .title-experience {
-    color: white;
-    padding-top: 40px;
+    padding-top: 80px;
     padding-bottom: 30px;
 }
 .experience {
     display: block;
-    color:black;
     font-weight: 600;
     text-align: center;
     align-items: center;
@@ -85,9 +71,8 @@ h2 {
     margin-right: 10px;
 }
 .title-skills {
-    color:white;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 30px;
 }
 .skills-list {
@@ -96,40 +81,35 @@ h2 {
     font-family: Monaco, monospace;
     font-style: oblique;
     font-weight: bolder;
-    font-size: 35px;
-    color: rgb(105, 21, 157);
     align-items: left;
     list-style-type: none;
     width: 100%;
     text-align: center;
     justify-content: center;
-    padding-bottom: 10px;
 }
-#projects {
-    text-align: center;
-    font-size: 35px;
-    color: black;
-    padding-top: 50px;
+.title-projects {
+    padding-top: 80px;
     padding-bottom: 30px;
+}
+.project-list {
+    text-align: center;
     justify-content: space-around;
-    
+    padding-bottom: 20px; 
 }
 .social-media {
     text-align: center;
-    color: white;
-    padding-top: 0px;
-    padding-bottom: 10px;
+    padding-top: 80px;
+    padding-bottom: 30px;
 }
 .sm-section {
-    background-color: rgb(173, 126, 218);
+    background-color: rgb(196, 65, 116);
 }
 .title-feedback {
-    color: white;
     height: 40px;
     text-align: center;
     width: 100%;
-    padding-top: 60px;
-    padding-bottom: 5px;
+    padding-top: 80px;
+    padding-bottom: 30px;
 } 
 #leave_message {
     font-size: 25px;
@@ -142,7 +122,6 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    font-size: 20px;
     justify-content: center;
     margin-left: 10px;  
 }  
@@ -158,16 +137,18 @@ h2 {
     width: 100px;
     background-color: rgb(36, 160, 237);
 }
-.title-messages {
-    width: 100%;
-    color: white;
-}
 #messages {
     display: block;
     margin-bottom: 1rem;
     max-width: 100%;
     width: 100%;
-    font-size: 20px; 
+    justify-content: center;
+    text-align: center;
+}
+.title-messages {
+    width: 100%;
+    height: 40px;
+    text-align: center;
 }
 .footer {
     display: block;
@@ -175,17 +156,6 @@ h2 {
     word-spacing: 2px;
     padding-top: 40px;
     margin-left: 10px;
-}
-.container {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    width: 100%;
-    justify-content: space-around;
-    padding: 2px;
-    font-size: 25px;
-    font-weight: 900;
-
 }
 header {
     display: flex;
@@ -197,17 +167,46 @@ header {
     margin-right: auto;
     font-weight: 800;
 }
-@media (max-width: 800px) { 
+.about-me,
+.education,
+.experience,
+.skills-list,
+.project-list,
+.sm-list {
+    font-size: 25px;
+}
+nav {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+.container div {
+    margin: 0;
+    width: 100%;
+    padding: 32px;
+    font-size: 25px;
+    font-weight: 900;
+}
+input {
+    color: black;
+}
+textarea {
+    color: black;
+}
+@media (max-width: 1200px) { 
     .body-wrapper {
         width: 100%;
         justify-content: center;
         text-align: center;
     }
     .container {
-        display: block;
+        display: none;
         width: 100%;
+        justify-content: center;
+        text-align: center;
 }
-@media (min-width:1200px) {
+@media (min-width:200px) {
     .body-wrapper {
         width: 1000px;
     }  
